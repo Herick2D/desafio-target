@@ -1,6 +1,6 @@
 // desafio 1
 
-function calcularSoma(indice) {
+export function calcularSoma(indice) {
   let soma = 0;
   let k = 0;
 
@@ -15,15 +15,15 @@ function calcularSoma(indice) {
 
 // desafio 2
 
-function isFibonacci(numero) {
+export function isFibonacci(numero) {
   let a = 0;
   let b = 1;
 
-  if (num === a || num === b) return true;
+  if (numero === a || numero === b) return true;
 
   let next = a + b;
-  while (next <= num) {
-    if (next === num) return true;
+  while (next <= numero) {
+    if (next === numero) return true;
     a = b;
     b = next;
     next = a + b;
@@ -46,7 +46,7 @@ function isFibonacci(numero) {
 *
 * */
 
-function analisarFaturamento(faturamento) {
+export function analisarFaturamento(faturamento) {
   const diasValidos = faturamento.filter(dia => dia.valor > 0);
 
   const menorFaturamento = Math.min(...diasValidos.map(dia => dia.valor));
@@ -66,7 +66,7 @@ function analisarFaturamento(faturamento) {
 
 // desafio 4
 
-function calcularParticipacaoFaturamento(faturamentoPorEstado) {
+export function calcularParticipacaoFaturamento(faturamentoPorEstado) {
   const faturamentoTotal = Object.values(faturamentoPorEstado).reduce(
     (total, valor) => total + valor,
     0
@@ -85,7 +85,7 @@ function calcularParticipacaoFaturamento(faturamentoPorEstado) {
 
 // desafio 5
 
-function inverterString(string) {
+export function inverterString(string) {
   let stringInvertida = '';
   for (let i = string.length - 1; i >= 0; i--) {
     stringInvertida += string[i];
