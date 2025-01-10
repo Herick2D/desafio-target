@@ -43,6 +43,18 @@ if (isFibonacci(numero)) {
 
 // desafio 3
 
+/*
+*   Obj faturamento -
+*    [{
+*     "dia": 1,
+*     "valor": 22174.1664
+* }]
+*
+* Array de objetos, que possuem duas chaves valores, sendo seus valores números
+*
+*
+* */
+
 function analisarFaturamento(faturamento) {
   const diasValidos = faturamento.filter(dia => dia.valor > 0);
 
@@ -58,5 +70,24 @@ function analisarFaturamento(faturamento) {
     menorFaturamento: menorFaturamento.toFixed(2),
     maiorFaturamento: maiorFaturamento.toFixed(2),
     diasAcimaMedia
+  };
+}
+
+// desafio 4
+
+function calcularParticipacaoFaturamento(faturamentoPorEstado) {
+  const faturamentoTotal = Object.values(faturamentoPorEstado).reduce(
+    (total, valor) => total + valor,
+    0
+  );
+
+  const participacaoPorEstado = {};
+  for (const [estado, valor] of Object.entries(faturamentoPorEstado)) {
+    participacaoPorEstado[estado] = ((valor / faturamentoTotal) * 100).toFixed(2) + '%';
+  }
+
+  return {
+    faturamentoTotal: faturamentoTotal.toFixed(2),
+    participacaoPorEstado,
   };
 }
