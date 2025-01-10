@@ -12,8 +12,6 @@ function calcularSoma(indice) {
   return soma;
 }
 
-const resultado = calcularSoma(13);
-console.log(resultado);
 
 // desafio 2
 
@@ -32,13 +30,6 @@ function isFibonacci(numero) {
   }
 
   return false;
-}
-
-const numero = 21;
-if (isFibonacci(numero)) {
-  console.log(`${numero} pertence à sequência de Fibonacci.`);
-} else {
-  console.log(`${numero} não pertence à sequência de Fibonacci.`);
 }
 
 // desafio 3
@@ -90,4 +81,14 @@ function calcularParticipacaoFaturamento(faturamentoPorEstado) {
     faturamentoTotal: faturamentoTotal.toFixed(2),
     participacaoPorEstado,
   };
+}
+
+// desafio 5
+
+function inverterString(string) {
+  let stringInvertida = '';
+  for (let i = string.length - 1; i >= 0; i--) {
+    stringInvertida += string[i];
+  }
+  return stringInvertida;
 }
