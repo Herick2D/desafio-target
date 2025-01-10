@@ -32,6 +32,14 @@ export function isFibonacci(numero) {
   return false;
 }
 
+export function verificarFibonacci(numero) {
+  if (isFibonacci(numero)) {
+    return `${numero} pertence à sequência de Fibonacci.`
+  } else {
+    return `${numero} não pertence à sequência de Fibonacci.`;
+  }
+}
+
 // desafio 3
 
 /*

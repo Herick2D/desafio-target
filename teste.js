@@ -1,4 +1,11 @@
-import { calcularSoma, isFibonacci, analisarFaturamento, calcularParticipacaoFaturamento, inverterString } from './desafio.js';
+import {
+  calcularSoma,
+  isFibonacci,
+  analisarFaturamento,
+  calcularParticipacaoFaturamento,
+  inverterString,
+  verificarFibonacci
+} from './desafio.js';
 
 // Arquivo de testes
 
@@ -10,7 +17,8 @@ console.log(calcularSoma(13));
 // desafio 2
 
 console.log('\nDesafio 2')
-console.log(isFibonacci(21));
+console.log(verificarFibonacci(21));
+console.log(verificarFibonacci(22));
 
 // desafio 3
 
